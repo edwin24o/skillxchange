@@ -1,0 +1,84 @@
+/* About Us page container */
+.about-us-page-container {
+  background: linear-gradient(to bottom, black, #0066cc); /* Black to blue gradient */
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header styles */
+.about-header {
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+  height: 30px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure the image stays within bounds */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-header h1 {
+  position: top;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 2.5rem;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Image styles inside the header */
+.about-header-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover; /* Ensures the image scales well */
+}
+
+/* Content section */
+.about-content {
+  margin-top: 30px;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Home button styles */
+.home-button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.home-button:focus {
+  outline: none;
+}

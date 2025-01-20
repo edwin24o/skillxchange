@@ -1,0 +1,131 @@
+:root {
+    --orange-color: rgb(238, 164, 25);
+    --dark-blue-color: rgb(3, 3, 47);
+    --dark-color: black;
+    --light-color: rgb(241, 237, 237);
+    --light-blue-color: rgb(79, 42, 246);
+  }
+  
+  /* Scope styles to listing-detail-page */
+  .listing-detail-page {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--dark-blue-color);
+    color: var(--light-color);
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Heading style */
+  .listing-detail-page h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--light-color);
+    text-align: center;
+  }
+  
+  /* Paragraph style */
+  .listing-detail-page p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--light-color);
+  }
+  
+  /* Strong tag for labels */
+  .listing-detail-page p strong {
+    color: var(--orange-color);
+  }
+  
+  /* Back button styling */
+  .listing-detail-page .back-button {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--light-color);
+    background-color: var(--orange-color);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .listing-detail-page .back-button:hover {
+    background-color: var(--light-blue-color);
+  }
+  
+  /* Exchange skill styling */
+  .listing-detail-page .exchange-skill {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Message form section */
+  .listing-detail-page .message-form {
+    margin-top: 40px;
+    padding: 20px;
+    background: var(--light-blue-color);
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .listing-detail-page .message-form textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid var(--light-color);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-color);
+  }
+  
+  .listing-detail-page .message-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .listing-detail-page .message-form button {
+    padding: 12px 24px;
+    background-color: var(--orange-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .listing-detail-page .message-form button:hover {
+    background-color: var(--light-blue-color);
+  }
+  
+  /* Ensure consistent spacing */
+  .listing-detail-page p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .listing-detail-page {
+      padding: 20px;
+      margin: 20px;
+    }
+  
+    .listing-detail-page .back-button {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    .listing-detail-page .message-form {
+      padding: 35px;
+    }
+  }

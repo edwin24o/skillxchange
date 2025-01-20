@@ -1,0 +1,101 @@
+.searchlisting-page {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--dark-blue-color);
+    color: var(--light-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .searchlist-bar-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .searchlist-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--light-color);
+  }
+  
+  .searchlist-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .searchlist-select,
+  .searchlist-input {
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .searchlist-button {
+    padding: 10px 20px;
+    background-color: var(--orange-color);
+    border: none;
+    color: var(--light-color);
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .searchlist-button:hover {
+    background-color: var(--light-blue-color);
+  }
+  
+  .results-section {
+    width: 80%;
+    margin-top: 40px;
+  }
+  
+  .results-section h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--light-color);
+  }
+  
+  .results-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .result-item {
+    background-color: var(--light-blue-color);
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .result-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .result-item strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--orange-color);
+  }
+  
+  .result-item span {
+    font-size: 14px;
+    color: var(--light-color);
+  }
+  

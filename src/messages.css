@@ -1,0 +1,92 @@
+.messages-page {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background: linear-gradient(180deg, rgb(8, 8, 86) 0%, black 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.messages-header {
+  display: flex;
+  align-items: center;
+  height: auto;
+  justify-content:  center;
+  margin-bottom: 20px;
+}
+
+.messages-header h1 {
+  color: white;
+}
+
+.nav-home-btn {
+  background-color: rgb(238, 164, 25);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nav-home-btn:hover {
+  background-color: rgb(255, 200, 50);
+}
+
+.messages-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.messages-tabs button {
+  background-color: rgb(8, 8, 86);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.messages-tabs button.active {
+  background-color: rgb(238, 164, 25);
+}
+
+.messages-content h2 {
+  text-align: center;
+  color: rgba(202, 203, 204, 0.301);
+}
+
+.messages-list {
+  list-style: none;
+  padding: 0;
+}
+
+.message-item {
+  background-color: rgb(8, 8, 86);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message-time {
+  font-size: 12px;
+  color: gray;
+}
+
+.create-message-form input,
+.create-message-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.create-message-form button {
+  background-color: rgb(238, 164, 25);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
