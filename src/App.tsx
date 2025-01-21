@@ -36,7 +36,7 @@ import CreateProfile from './createprofile';
 import HomePage from './homepage';
 import SearchListing from './searchlisting';
 import PostPage from './postpage';
-import AboutUs from './aboutus';
+import AboutUs from './AboutUs';
 import Contact from './contact';
 import SearchPage from './searchpage';
 import ListingDetail from './listingdetail';

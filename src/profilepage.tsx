@@ -6,10 +6,11 @@ interface UserProfile {
   fullName: string;
   email: string;
   phone: string;
-  address: string;
   avatarUrl: string;
   jobTitle: string; // Skill name as Job Title
-  location: string;
+  city: string; // Updated to reflect new field
+  state: string; // Updated to reflect new field
+  zipCode: string; // Updated to reflect new field
   bio: string;
   socialLinks: {
     github: string;
@@ -47,15 +48,14 @@ const ProfilePage: React.FC = () => {
         const data = await response.json();
 
         if (response.status === 200) {
-          // Map `profile_picture` to `avatarUrl`
           const mappedProfile = {
-              ...data,
-              avatarUrl: data.profile_picture, // Ensure this matches backend field name
+            ...data,
+            avatarUrl: data.profile_picture, // Map backend field to `avatarUrl`
           };
           setProfile(mappedProfile);
-      } else if (response.status === 404) {
+        } else if (response.status === 404) {
           navigate("/profile/createprofile");
-      } else {
+        } else {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
       } catch (err) {
@@ -95,13 +95,12 @@ const ProfilePage: React.FC = () => {
           {/* Left Profile Section */}
           <div className="profile-left">
             <div className="profile-card">
-            <img
-  src={`http://localhost:5000${profile.avatarUrl || "/static/profile-images/default-profile.png"}`}
-  alt="Profile Avatar"
-  className="profile-avatar"
-/>
+              <img
+                src={`http://localhost:5000${profile.avatarUrl || "/static/profile-images/default-profile.png"}`}
+                alt="Profile Avatar"
+                className="profile-avatar"
+              />
               <h3 className="profile-name">{profile.fullName || "N/A"}</h3>
-              {/* <p className="profile-job-title">{profile.jobTitle || "N/A"}</p> */}
               <p className="profile-bio">{profile.bio || "N/A"}</p>
               <div className="profile-actions">
                 <button className="btn light">Follow</button>
@@ -122,8 +121,16 @@ const ProfilePage: React.FC = () => {
                 <span>{profile.phone || "N/A"}</span>
               </div>
               <div className="detail-item">
-                <strong>Location:</strong>
-                <span>{profile.location || "N/A"}</span>
+                <strong>City:</strong>
+                <span>{profile.city || "N/A"}</span>
+              </div>
+              <div className="detail-item">
+                <strong>State:</strong>
+                <span>{profile.state || "N/A"}</span>
+              </div>
+              <div className="detail-item">
+                <strong>ZIP Code:</strong>
+                <span>{profile.zipCode || "N/A"}</span>
               </div>
               <div className="detail-item">
                 <strong>Social Links:</strong>
@@ -142,19 +149,13 @@ const ProfilePage: React.FC = () => {
                   </li>
                   <li>
                     <strong>Instagram:</strong>{" "}
-                    <a
-                      href={profile.socialLinks.instagram || "#"}
-                      target="_blank"
-                    >
+                    <a href={profile.socialLinks.instagram || "#"} target="_blank">
                       {profile.socialLinks.instagram || "Not Provided"}
                     </a>
                   </li>
                   <li>
                     <strong>Facebook:</strong>{" "}
-                    <a
-                      href={profile.socialLinks.facebook || "#"}
-                      target="_blank"
-                    >
+                    <a href={profile.socialLinks.facebook || "#"} target="_blank">
                       {profile.socialLinks.facebook || "Not Provided"}
                     </a>
                   </li>

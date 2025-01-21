@@ -6,14 +6,22 @@ const ListingDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [listing, setListing] = useState<any>(null);
   const [messageContent, setMessageContent] = useState<string>("");
+  const [userName, setUserName] = useState<string>("");
   const navigate = useNavigate();
 
+  // Fetch listing details
   useEffect(() => {
     const fetchListingDetails = async () => {
       try {
         const response = await fetch(`http://localhost:5000/listings/${id}`);
         const data = await response.json();
+
         setListing(data);
+
+        // Fetch user name based on `user_id`
+        const userResponse = await fetch(`http://localhost:5000/users/${data.user_id}`);
+        const userData = await userResponse.json();
+        setUserName(userData.full_name || "Anonymous"); // Handle no name case
       } catch (error) {
         console.error("Error fetching listing details:", error);
       }
@@ -32,7 +40,7 @@ const ListingDetail: React.FC = () => {
       }
 
       const messageData = {
-        recipient_id: listing.user_id, 
+        recipient_id: listing.user_id,
         listing_id: listing.id,
         content: messageContent,
       };
@@ -68,26 +76,40 @@ const ListingDetail: React.FC = () => {
       <button onClick={() => navigate(-1)} className="back-button">
         Go Back
       </button>
-      <h1>{listing.title}</h1>
-      <p>
-        <strong>Description:</strong> {listing.description}
-      </p>
-      <p>
-        <strong>Location:</strong> {listing.location}
-      </p>
-      <p>
-        <strong>Type:</strong> {listing.type}
-      </p>
-      {listing.type === "exchange" && (
-        <>
-          <p>
-            <strong>Offered Skill:</strong> {listing.offered_skill}
-          </p>
-          <p>
-            <strong>Wanted Skill:</strong> {listing.wanted_skill}
-          </p>
-        </>
-      )}
+      <div className="listing-header">
+        <h1>{listing.title}</h1>
+        {listing.image && (
+          <img
+            src={`http://localhost:5000${listing.image}`}
+            alt={listing.title}
+            className="listing-image"
+          />
+        )}
+      </div>
+      <div className="listing-info">
+        <p>
+          <strong>Description:</strong> {listing.description || "No description provided"}
+        </p>
+        <p>
+          <strong>Location:</strong> {`${listing.city}, ${listing.state}, ${listing.zip_code}`}
+        </p>
+        <p>
+          <strong>Type:</strong> {listing.type}
+        </p>
+        {listing.type === "exchange" && (
+          <>
+            <p>
+              <strong>Offered Skill:</strong> {listing.offered_skill || "N/A"}
+            </p>
+            <p>
+              <strong>Wanted Skill:</strong> {listing.wanted_skill || "N/A"}
+            </p>
+          </>
+        )}
+        <p>
+          <strong>Posted By:</strong> {userName}
+        </p>
+      </div>
 
       <div className="message-form">
         <h2>Send a Message</h2>
