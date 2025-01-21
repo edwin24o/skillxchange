@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
              
             </div>
             <div className="right">
-              <img src="/src/images/welder.j" alt="Testimonials" width="600px" className="anim" />
+              <img src="img/testimonials.webp" alt="Testimonials" width="600px" className="anim" />
             </div>
             <div className="state-cards">
               <div className="state-card state-map">
