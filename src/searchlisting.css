@@ -1,6 +1,6 @@
 .searchlisting-page {
     font-family: "Poppins", sans-serif;
-    background-color: var(--dark-blue-color);
+    background: linear-gradient(180deg, rgb(8, 8, 86) 0%, black 100%);
     color: var(--light-color);
     min-height: 100vh;
     display: flex;
@@ -74,7 +74,7 @@
   }
   
   .result-item {
-    background-color: var(--light-blue-color);
+    background-color: rgba(202, 198, 198, 0.13);
     padding: 15px;
     border-radius: 10px;
     width: 300px;

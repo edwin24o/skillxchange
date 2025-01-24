@@ -23,9 +23,9 @@ const HomePage: React.FC = () => {
       <header>
         <div className="wrapper">
         <nav className="anim">
-            <div className="logo">
+            <div className="homepage-logo">
               <img src="/src/images/skillx.png" alt="Logo" width="130px" />
-              <p className="anim">show GRIT</p>
+              <p className="homepage-slogan">show GRIT</p>
             </div>
             <ul>
               {/* Show login/signup if not logged in */}
@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
                 // Show the navigation menu and logout button if logged in
                 <>
                   <li>
-                    <button onClick={() => navigate('/listings/default')}>Xchange</button>
+                    <button onClick={() => navigate('/listings')}>Xchange</button>
                   </li>
                   <li>
                     <button onClick={() => navigate('/aboutus')}>About Us</button>
@@ -71,7 +71,6 @@ const HomePage: React.FC = () => {
              
             </div>
             <div className="right">
-              <img src="/src/images/welder.j" alt="Testimonials" width="600px" className="anim" />
             </div>
             <div className="state-cards">
               <div className="state-card state-map">

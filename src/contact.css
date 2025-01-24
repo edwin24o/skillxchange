@@ -2,50 +2,49 @@
   position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Stack the content vertically */
+  flex-direction: column; 
   align-items: center;
-  justify-content: center; /* Center the form */
+  justify-content: center; 
   padding: 20px;
-  background: linear-gradient(to bottom, black, #0066cc); /* Black to blue gradient */
-  color: white; /* White text to contrast with the dark background */
+  background: linear-gradient(to bottom, black, #0066cc); 
+  color: white; 
   z-index: 0;
 }
 
 .contact-container img {
-  position: absolute; /* Keep the logo in the background */
-  top: 50%; /* Center the logo vertically */
-  left: 50%; /* Center the logo horizontally */
-  transform: translate(-50%, -50%); /* Ensure perfect centering */
-  z-index: -1; /* Ensure the logo stays behind the form */
-  max-width: 100%; /* Adjust size of the logo to be responsive */
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: -1; 
   height: auto;
 }
 
 .contact-form-wrapper {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-  backdrop-filter: blur(5px); /* Optional: Frosted glass effect */
+  background-color: rgba(255, 255, 255, 0.8); 
+  backdrop-filter: blur(5px); 
   padding: 30px;
   border-radius: 15px;
-  border: 2px solid #007bff; /* Stylish border for a tech look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  border: 2px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
   max-width: 600px;
   width: 100%;
-  z-index: 1; /* Ensure the form is above the background */
+  z-index: 1;
 }
 
 .contact-form-wrapper h1 {
   text-align: center;
   margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif; /* Modern font */
-  font-weight: 700; /* Bold heading */
-  color: #007bff; /* Primary color */
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 700; 
+  color: #007bff; 
   text-transform: uppercase;
 }
 
 .contact-form-wrapper label {
-  font-family: 'Poppins', sans-serif; /* Fun, modern font */
-  font-weight: 600; /* Bold labels */
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 600; 
   color: #333333;
   font-size: 1.1rem;
 }
@@ -90,14 +89,14 @@
 }
 
 .contact-footer {
-  background-color: rgba(255, 255, 255, 0.8); /* Same semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.8); 
   position: absolute;
-  bottom: 0; /* Position at the bottom of the page */
+  bottom: 0;
   width: 100%;
   text-align: center;
   padding: 10px 0;
   border-top: 1px solid #ddd;
-  z-index: 1; /* Ensure it's above other content */
+  z-index: 1; 
 }
 
 .footer-content p {

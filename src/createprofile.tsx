@@ -106,7 +106,7 @@ const CreateProfile: React.FC = () => {
 
       if (response.status === 201) {
         alert('Profile created successfully');
-        navigate('/home');
+        navigate('/');
       } else if (response.status === 401) {
         alert('Unauthorized: Please log in again');
         navigate('/login');
@@ -236,11 +236,11 @@ const CreateProfile: React.FC = () => {
           )}
 
           {/* Social Links */}
-          <label>Social Links</label>
+          {/* <label>Social Links</label>
           <div className="social-links">
             {['twitter', 'instagram', 'facebook'].map((platform) => (
               <button
-                key={platform}
+                
                 type="button"
                 className="social-button"
                 onClick={() => {
@@ -248,11 +248,10 @@ const CreateProfile: React.FC = () => {
                   setModalVisible(true);
                 }}
               >
-                <img src={`/icons/${platform}.png`} alt={`${platform} icon`} className="social-icon" />
-                {socialLinks[platform as 'twitter' | 'instagram' | 'facebook'] ? 'Connected' : 'Connect'}
+                
               </button>
             ))}
-          </div>
+          </div> */}
 
           <button type="submit">Save Profile</button>
         </form>

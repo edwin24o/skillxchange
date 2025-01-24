@@ -116,7 +116,7 @@ const Login: React.FC = () => {
 
         // Redirect based on whether the profile exists
         if (data.user.hasProfile) {
-          navigate('/home'); // Redirect to homepage if the user has a profile
+          navigate('/'); // Redirect to homepage if the user has a profile
         } else {
           navigate('/profile/createprofile'); // Redirect to create profile if no profile exists
         }

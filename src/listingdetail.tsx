@@ -6,10 +6,9 @@ const ListingDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [listing, setListing] = useState<any>(null);
   const [messageContent, setMessageContent] = useState<string>("");
-  const [userName, setUserName] = useState<string>("");
+  const [userName, setUserName] = useState<string>("Anonymous");
   const navigate = useNavigate();
 
-  // Fetch listing details
   useEffect(() => {
     const fetchListingDetails = async () => {
       try {
@@ -18,10 +17,11 @@ const ListingDetail: React.FC = () => {
 
         setListing(data);
 
-        // Fetch user name based on `user_id`
-        const userResponse = await fetch(`http://localhost:5000/users/${data.user_id}`);
-        const userData = await userResponse.json();
-        setUserName(userData.full_name || "Anonymous"); // Handle no name case
+        if (data.user_id) {
+          const userResponse = await fetch(`http://localhost:5000/users/${data.user_id}`);
+          const userData = await userResponse.json();
+          setUserName(userData.full_name || "Anonymous");
+        }
       } catch (error) {
         console.error("Error fetching listing details:", error);
       }
@@ -56,7 +56,7 @@ const ListingDetail: React.FC = () => {
 
       if (response.status === 201) {
         alert("Message sent successfully!");
-        setMessageContent(""); // Clear the message input
+        setMessageContent("");
       } else {
         const data = await response.json();
         alert(data.error || "Failed to send message.");
@@ -68,7 +68,7 @@ const ListingDetail: React.FC = () => {
   };
 
   if (!listing) {
-    return <p>Loading listing details...</p>;
+    return <p className="loading-message">Loading listing details...</p>;
   }
 
   return (
@@ -112,7 +112,7 @@ const ListingDetail: React.FC = () => {
       </div>
 
       <div className="message-form">
-        <h2>Send a Message</h2>
+        <h1>Send a Message</h1>
         <textarea
           placeholder="Write your message here..."
           value={messageContent}

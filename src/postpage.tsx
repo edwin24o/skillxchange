@@ -104,7 +104,7 @@ const PostPage: React.FC = () => {
 
       if (response.status === 201) {
         alert("Listing created successfully!");
-        navigate("/listings/default"); // Redirect to view listings
+        navigate("/listings"); // Redirect to view listings
       } else {
         const data = await response.json();
       console.log("Backend error:", data); // Log backend error

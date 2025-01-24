@@ -1,6 +1,6 @@
 /* About Us page container */
 .about-us-page-container {
-  background: linear-gradient(to bottom, black, #0066cc); /* Black to blue gradient */
+  background: linear-gradient(to bottom, black, #0066cc); 
   min-height: 100vh;
   padding: 20px;
   color: white;
@@ -18,7 +18,7 @@
   width: 100%;
   max-width: 800px;
   border-radius: 10px;
-  overflow: hidden; /* Ensure the image stays within bounds */
+  overflow: hidden; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -31,7 +31,7 @@
   font-weight: 700;
   color: white;
   font-size: 2.5rem;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+  background: rgba(0, 0, 0, 0.5); 
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -40,7 +40,7 @@
 .about-header-image {
   width: 100%;
   height: 500px;
-  object-fit: cover; /* Ensures the image scales well */
+  object-fit: cover; 
 }
 
 /* Content section */
@@ -49,7 +49,7 @@
   max-width: 800px;
   width: 100%;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.1); 
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

@@ -87,8 +87,7 @@ const ProfilePage: React.FC = () => {
       <div className="profile-container">
         {/* Breadcrumb Navigation */}
         <div className="profile-breadcrumb">
-          <a href="/">Home</a> &gt; <a href="/listings/default">Xchanges</a> &gt;{" "}
-          <a href="/listings">Post</a>
+          <a href="/">Home</a>
         </div>
 
         <div className="profile-content">
